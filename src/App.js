@@ -9,11 +9,12 @@ function App() {
         <h1>Conversor Peso a Dolar</h1>
     </div>
     <div className="container">
-        <form action="">
+        <form onSubmit={e => actions.login(e, props.history)}>
             <div className="row">
                 <div className="col-md-4">
                     <label for="monto">Monto</label>
-                    <input type="number" name="monto" id="monto" placeholder="1"/>
+                    <input type="number" name="monto" id="monto" placeholder="1" value={store.email}
+                                            onChange={actions.handleChange}/>
                 </div>
                 <div className="col-md-4">
                     <label for="monto">De</label>
